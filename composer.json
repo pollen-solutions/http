@@ -42,9 +42,9 @@
     }
   },
   "suggest": {
-    "pollen-solutions/container" : "Pollen Container Component - PSR-11 ready Dependencies Injection Container.",
-    "pollen-solutions/cookie": "Pollen Cookie Component - Cookies repository.",
-    "pollen-solutions/session": "Pollen Session Component - HTTP Request User's session store and query information."
+    "pollen-solutions/container" : "Pollen Solutions - Container Component - PSR-11 Dependency injection container.",
+    "pollen-solutions/cookie": "Pollen Solutions - Cookie Component - HTTP Request cookie manager.",
+    "pollen-solutions/session": "Pollen Solutions - Session Component - HTTP Request User's session store and query information."
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
