@@ -133,6 +133,14 @@ class Request extends BaseRequest implements RequestInterface
     /**
      * @inheritDoc
      */
+    public function getUrl(): string
+    {
+        return $this->getSchemeAndHttpHost().$this->getBaseUrl().$this->getPathInfo();
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function getUserAgent(): ?string
     {
         return $this->headers->get('User-Agent');

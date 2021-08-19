@@ -62,6 +62,13 @@ interface RequestInterface
     public function getRewriteBase(): string;
 
     /**
+     * Get the URL without query string.
+     *
+     * @return string
+     */
+    public function getUrl(): string;
+
+    /**
      * Get the client user agent.
      *
      * @return string|null
