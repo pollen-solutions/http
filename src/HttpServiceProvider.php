@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Pollen\Http;
 
+use Laminas\HttpHandlerRunner\Emitter\EmitterInterface;
+use Laminas\HttpHandlerRunner\Emitter\SapiEmitter;
 use Pollen\Container\ServiceProvider;
 use Psr\Http\Message\ServerRequestInterface as PsrRequestInterface;
 
@@ -11,7 +13,8 @@ class HttpServiceProvider extends ServiceProvider
 {
     protected $provides = [
         PsrRequestInterface::class,
-        RequestInterface::class
+        RequestInterface::class,
+        EmitterInterface::class
     ];
 
     /**
@@ -26,5 +29,7 @@ class HttpServiceProvider extends ServiceProvider
         $this->getContainer()->share(PsrRequestInterface::class, function () {
             return Request::createPsr();
         });
+
+        $this->getContainer()->share(EmitterInterface::class, SapiEmitter::class);
     }
 }
